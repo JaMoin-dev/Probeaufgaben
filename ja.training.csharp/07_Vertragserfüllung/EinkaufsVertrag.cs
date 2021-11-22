@@ -17,7 +17,6 @@ namespace ja.training.csharp._07_Vertragserfüllung
         public bool WirdErfülltDurch(List<StromBundle> einlieferungen)
         {
             // TODO
-            return BookasLösung.Test(VertragsPositionen, einlieferungen);
             throw new NotImplementedException();
         }
     }
