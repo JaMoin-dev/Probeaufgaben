@@ -20,7 +20,7 @@
 
         public override string ToString()
         {
-            return $"{MWh}:{(Qualitaetsmerkmale.Windkraft ? 1 : 0)},{(Qualitaetsmerkmale.Wasserkraft ? 1 : 0)},{(Qualitaetsmerkmale.Fischtreppe ? 1 : 0)},{(Qualitaetsmerkmale.OhneSubvention ? 1 : 0)}";
+            return $"{MWh}:{Qualitaetsmerkmale}";
         }
     }
 }
