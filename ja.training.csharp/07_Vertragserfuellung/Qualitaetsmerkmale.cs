@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 
-namespace ja.training.csharp._07_Vertragserfüllung
+namespace ja.training.csharp._07_Vertragserfuellung
 {
-    public class Qualitätsmerkmale
+    public class Qualitaetsmerkmale
     {
         public bool Windkraft { get; }
         public bool Wasserkraft { get; }
         public bool Fischtreppe { get; }
         public bool OhneSubvention { get; }
 
-        public Qualitätsmerkmale(bool wind, bool wasser, bool fisch, bool ohne)
+        public Qualitaetsmerkmale(bool wind, bool wasser, bool fisch, bool ohne)
         {
             Windkraft = wind;
             Wasserkraft = wasser;
@@ -17,7 +17,7 @@ namespace ja.training.csharp._07_Vertragserfüllung
             OhneSubvention = ohne;
         }
 
-        public Qualitätsmerkmale(Qualitätsmerkmale qualis)
+        public Qualitaetsmerkmale(Qualitaetsmerkmale qualis)
         {
             Windkraft = qualis.Windkraft;
             Wasserkraft = qualis.Wasserkraft;
@@ -26,11 +26,11 @@ namespace ja.training.csharp._07_Vertragserfüllung
         }
 
         /// <summary>
-        /// testet, ob alle gesetzten Qualitätsmerkmale auch durch die zu testenden Qualitätsmerkmale erfüllt sind. 
-        /// Wenn die Ergebnisliste leer ist, sind alle geforderten Qualitätsmerkmale erfüllt
+        /// testet, ob alle gesetzten Qualitaetsmerkmale auch durch die zu testenden Qualitaetsmerkmale erfüllt sind. 
+        /// Wenn die Ergebnisliste leer ist, sind alle geforderten Qualitaetsmerkmale erfüllt
         /// </summary>
-        /// <returns>Liste der gesetzten Qualitätsmerkmale die in den zu testenden Qualitätsmerkmale nicht erfüllt sind</returns>
-        public List<string> GetUnmatchedProperties(Qualitätsmerkmale test)
+        /// <returns>Liste der gesetzten Qualitaetsmerkmale die in den zu testenden Qualitaetsmerkmale nicht erfüllt sind</returns>
+        public List<string> GetUnmatchedProperties(Qualitaetsmerkmale test)
         {
             var result = new List<string>();
 
@@ -40,6 +40,11 @@ namespace ja.training.csharp._07_Vertragserfüllung
             if (OhneSubvention && !test.OhneSubvention) result.Add(nameof(OhneSubvention));
 
             return result;
+        }
+
+        public override string ToString()
+        {
+            return $"{(Windkraft?1:0)},{(Wasserkraft ? 1 : 0)},{(Fischtreppe ? 1 : 0)},{(OhneSubvention ? 1 : 0)}";
         }
     }
 }

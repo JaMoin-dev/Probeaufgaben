@@ -1,13 +1,7 @@
-using ja.training.csharp._01_TimeboxedCounter;
-using ja.training.csharp._02_FormatWith;
-using ja.training.csharp.Services;
-using Moq;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using Xunit;
 
-namespace ja.training.csharp._07_Vertragserfüllung
+namespace ja.training.csharp._07_Vertragserfuellung
 {
     public class EinkaufsVertragTest
     {
@@ -16,7 +10,7 @@ namespace ja.training.csharp._07_Vertragserfüllung
         [InlineData(100, false, true, false, false)]
         [InlineData(200, false, true, false, false)]
         [InlineData(100, false, true, true, true)]
-        public void Simple_erfüllt(int mwh, bool wind, bool wasser, bool fisch, bool ohne)
+        public void Simple_erfuellt(int mwh, bool wind, bool wasser, bool fisch, bool ohne)
         {
             // arrange
             var vertrag = new EinkaufsVertrag(new List<StromBundle>
@@ -30,14 +24,14 @@ namespace ja.training.csharp._07_Vertragserfüllung
             };
 
             // assert
-            Assert.True(vertrag.WirdErfülltDurch(einlieferung));
+            Assert.True(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
         [Theory]
         [InlineData(100, false, false, false, false)]
         [InlineData(200, false, false, true, true)]
         [InlineData(99, false, true, true, true)]
-        public void Simple_nicht_erfüllt(int mwh, bool wind, bool wasser, bool fisch, bool ohne)
+        public void Simple_nicht_erfuellt(int mwh, bool wind, bool wasser, bool fisch, bool ohne)
         {
             // arrange
             var vertrag = new EinkaufsVertrag(new List<StromBundle>
@@ -51,7 +45,7 @@ namespace ja.training.csharp._07_Vertragserfüllung
             };
 
             // assert
-            Assert.False(vertrag.WirdErfülltDurch(einlieferung));
+            Assert.False(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
         [Theory]
@@ -59,7 +53,7 @@ namespace ja.training.csharp._07_Vertragserfüllung
         [InlineData(300, false, true, false, true, 2000, true, false, false, true)]
         [InlineData(290, false, true, true, true, 2000, true, false, false, true)]
         [InlineData(300, false, true, true, true, 2000, true, false, false, false)]
-        public void Complex_nicht_erfüllt(int mwh, bool wind, bool wasser, bool fisch, bool ohne,
+        public void Complex_nicht_erfuellt(int mwh, bool wind, bool wasser, bool fisch, bool ohne,
             int mwh2, bool wind2, bool wasser2, bool fisch2, bool ohne2)
         {
             // arrange
@@ -72,11 +66,11 @@ namespace ja.training.csharp._07_Vertragserfüllung
             };
 
             // assert
-            Assert.False(vertrag.WirdErfülltDurch(einlieferung));
+            Assert.False(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
         [Fact]
-        public void Complex_nicht_erfüllt2()
+        public void Complex_nicht_erfuellt2()
         {
             // arrange
             var vertrag = CreateComplexEkv();
@@ -84,13 +78,33 @@ namespace ja.training.csharp._07_Vertragserfüllung
             einlieferung.RemoveAt(4);
 
             // assert
-            Assert.False(vertrag.WirdErfülltDurch(einlieferung));
+            Assert.False(vertrag.WirdErfuelltDurch(einlieferung));
+        }
+
+        [Fact]
+        public void Complex_nicht_erfuellt3_will_crush_naiive_Implementations()
+        {
+            // arrange
+            var vertrag = CreateComplexEkv();
+
+            var einlieferung = new List<StromBundle>
+            {
+                new StromBundle(100, false, true, false, false),
+                new StromBundle(100, false, true, true, false),
+                new StromBundle(100, false, true, true, true),
+                new StromBundle(1000, true, false, false, false)
+            };
+            for (int i = 0; i < 99; i++)
+                einlieferung.Add(new StromBundle(10, true, false, false, true));
+
+            // assert
+            Assert.False(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
         [Theory]
         [InlineData(200, false, true, true, true, 2100, true, true, true, true)]
         [InlineData(300, false, true, true, true, 2000, true, false, false, true)]
-        public void Complex_erfüllt(int mwh, bool wind, bool wasser, bool fisch, bool ohne,
+        public void Complex_erfuellt(int mwh, bool wind, bool wasser, bool fisch, bool ohne,
             int mwh2, bool wind2, bool wasser2, bool fisch2, bool ohne2)
         {
             // arrange
@@ -102,22 +116,22 @@ namespace ja.training.csharp._07_Vertragserfüllung
             };
 
             // assert
-            Assert.True(vertrag.WirdErfülltDurch(einlieferung));
+            Assert.True(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
         [Fact]
-        public void Complex_erfüllt2()
+        public void Complex_erfuellt2()
         {
             // arrange
             var vertrag = CreateComplexEkv();
             var einlieferung = CreateComplexEkv().VertragsPositionen;
 
             // assert
-            Assert.True(vertrag.WirdErfülltDurch(einlieferung));
+            Assert.True(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
         [Fact]
-        public void Complex_erfüllt3()
+        public void Complex_erfuellt3()
         {
             // arrange
             var vertrag = CreateComplexEkv();
@@ -126,11 +140,11 @@ namespace ja.training.csharp._07_Vertragserfüllung
             einlieferung.RemoveAt(0);
 
             // assert
-            Assert.True(vertrag.WirdErfülltDurch(einlieferung));
+            Assert.True(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
         [Fact]
-        public void Complex_erfüllt4()
+        public void Complex_erfuellt4()
         {
             // arrange
             var vertrag = CreateComplexEkv();
@@ -144,10 +158,10 @@ namespace ja.training.csharp._07_Vertragserfüllung
             };
 
             // assert
-            Assert.True(vertrag.WirdErfülltDurch(einlieferung));
+            Assert.True(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
-
+        
 
 
         /// <summary>
