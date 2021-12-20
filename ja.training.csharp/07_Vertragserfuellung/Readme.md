@@ -8,23 +8,26 @@
   - diese Prüfung ist Gegenstand dieser Aufgabe!
 
 ## Beispiel
-- Vertraglich vereinbart: 
+- Vertraglich vereinbart fürs ganze Jahr: 
   - 100MWh Wasserkraft
   - 100MWh Windkraft
   - 100MWh Wasserkraft mit Fischtreppe
 
-- Eingeliefert
+- Eingeliefert werden nach und nach im Laufe des Jahres
   - 150MWh Wasserkraft mit Fischtreppe
   - 50MWh Wasserkraft
   - 100MWh Windkraft
 
-- Diese Einlieferung erfüllt die vertraglichen Vereinbarungen, denn höhere Qualität ist erlaubt.
+- Diese Einlieferung erfüllt die vertraglichen Vereinbarungen, denn höhere Qualität ist erlaubt. 
+  - Wir haben wie vereinbart 100MWh Windkraft bekommen
+  - Wir haben wie vereinbart 100MWh Wasserkraft mit Fischtreppe bekommen
+  - Wir haben wie vereinbart 100MWh Wasserkraft  bekommen (50MWh davon haben sogar eine Fischtreppe, was besser ist als ohne)
 
 ## Rahmenbedingung
 - Es dürfen größere Mengen eingeliefert werden, als vereinbart
 - Es dürfen mehr Qualitätsmerkmale erfüllt sein, als vereinbart
 - VertragsPositionen dürfen in den Einlieferungen beliebig gestückelt oder zusammengefasst werden
-- Es muss eine Zuordnung von Einlieferungen zu Vereinbarungen geben, so dass mindestens alle Mengen mit ihren Q-Merkmalen erfüllt sind
+- Alle Einlieferungen zusammen müssen irgendwie alle Vertragspositionen abbilden, so dass mindestens alle Mengen mit ihren QualitätsmerkmalenMerkmalen erfüllt sind
 
 ## Aufgabe
 - Implementiere die Methode "EinkaufsVertrag.WirdErfülltDurch(List<StromBundle> einlieferungen)" so, dass alle Unit-Tests grün sind
