@@ -3,6 +3,9 @@
 ## Anwendungsfall
 - in Einkaufsverträgen werden Stromlieferungen fürs nächste Jahr vereinbart.
 - Strom kann verschiedene Qualitätsmerkmale haben (Windkraft, Wasserkraft, Fischtreppe, etc)
+  - die 4 Qualitätsmerkmale haben in sich keine Logik. Man kann sagen, es sind einfach bool-flags, die in beliebiger Kombinatorik vorkommen können (also auch Wind + Fischtreppe). 
+  - Dass das in der Realität nicht vorkommen wird, ist offensichtlich, aber im realen Anwendungsfall sind es eben weit mehr Flags, die aus Algorithmussicht grundsätzlich alle "gleich sind"
+  - wichtig zu verstehen ist eben, dass die vertraglich vereinbarten Flags MINDESTENS erfüllt sein müssen, mehr Flags sind aber erlaubt
 - Im Jahresverlauf wird Strom eingeliefert. 
 - Am Ende des Jahres wird geprüft, ob der gelieferte Strom den vertraglichen Vereinbarungen entsprach
   - diese Prüfung ist Gegenstand dieser Aufgabe!
