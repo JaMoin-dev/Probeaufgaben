@@ -161,7 +161,45 @@ namespace ja.training.csharp._07_Vertragserfuellung
             Assert.True(vertrag.WirdErfuelltDurch(einlieferung));
         }
 
-        
+        [Fact]
+        public void Complex_erfuellt5_fuer_Mirco()
+        {
+            // arrange
+            var vertrag = new EinkaufsVertrag(new List<StromBundle>
+            {
+                new StromBundle(100, true, false, false, false),
+                new StromBundle(100, false, true, false, false),
+            });
+
+            var einlieferung = new List<StromBundle>
+            {
+                new StromBundle(100, true, true, false, false),
+                new StromBundle(100, true, false, true, false),
+            };
+
+            // assert
+            Assert.True(vertrag.WirdErfuelltDurch(einlieferung));
+        }
+
+        [Fact]
+        public void Complex_erfuellt6_fuer_Mirco()
+        {
+            // arrange
+            var vertrag = new EinkaufsVertrag(new List<StromBundle>
+            {
+                new StromBundle(100, true, false, false, false),
+                new StromBundle(100, false, true, false, false),
+            });
+
+            var einlieferung = new List<StromBundle>
+            {
+                new StromBundle(100, true, false, true, false),
+                new StromBundle(100, true, true, false, false),
+            };
+
+            // assert
+            Assert.True(vertrag.WirdErfuelltDurch(einlieferung));
+        }
 
 
         /// <summary>
