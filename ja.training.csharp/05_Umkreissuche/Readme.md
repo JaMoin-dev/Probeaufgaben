@@ -6,7 +6,7 @@
 
 ## Aufgabe
 - wir wollen eine Telefonzellen-Suche umsetzen, so dass ich online meine Adresse eingeben kann und
--- die dichtesten 100 Telefonzellen nach Abstand sortiert sehen
+-- die dichtesten 100 Telefonzellen nach Abstand sortiert sehe
 
 ## Rahmenbedingungen
 - Lizenzkosten dürfen anfallen, der Kunde zahlt. Aber gerne nicht so viel, denn das Budget ist erschöpflich.
