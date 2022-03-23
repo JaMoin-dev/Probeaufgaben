@@ -13,7 +13,7 @@
 ## Rahmenbedingung
 - da die laufenden Nummern sehr groß sind (so dass sie in kein int oder long passen), müssen diese leider als String übergeben werden.
 - z.B. IntRange("12345678901234567890123451000", "12345678901234567890123451200")
-- wir können uns aber sicher sein, das die Differenz (also End-Start) immer klein genug ist, als dass es in einen int passt.
+- wir können uns aber sicher sein, dass die Differenz (also End-Start) immer klein genug ist, um in ein int zu passen.
 -- also in dem Beispiel 12345678901234567890123451000 - 12345678901234567890123451200 = 200
 
 ## Aufgabe

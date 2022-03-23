@@ -27,8 +27,8 @@
   - Wir haben wie vereinbart 100MWh Wasserkraft  bekommen (50MWh davon haben sogar eine Fischtreppe, was besser ist als ohne)
 
 ## Rahmenbedingung
-- Es dürfen größere Mengen eingeliefert werden, als vereinbart
-- Es dürfen mehr Qualitätsmerkmale erfüllt sein, als vereinbart
+- Es dürfen größere Mengen eingeliefert werden als vereinbart
+- Es dürfen mehr Qualitätsmerkmale erfüllt sein als vereinbart
 - VertragsPositionen dürfen in den Einlieferungen beliebig gestückelt oder zusammengefasst werden
 - Alle Einlieferungen zusammen müssen irgendwie alle Vertragspositionen abbilden, so dass mindestens alle Mengen mit ihren QualitätsmerkmalenMerkmalen erfüllt sind
 
