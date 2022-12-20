@@ -21,7 +21,7 @@ nebeneinander sitzen dürfen (Schießereien und Messerstechereien sollten dadurc
     [ACD][AE]
     <BF><CEF>
 
-Gesucht ist eine Reihenfolge der Gäste, die alle Bedingungen erfüllt.
+Gesucht ist eine Reihenfolge der Gäste A,B,C,D,E, und F, die alle Bedingungen erfüllt.
 
 Die triviale Reihenfolge `ABCDEF` passt also nicht, weil die Gruppe `[ACD]` nicht nebeneinandersitzt. 
 Für eine korrekte Lösung ist es unerheblich, in welcher Reihenfolge die Personen `[ACD]` nebeneinandersitzen.
