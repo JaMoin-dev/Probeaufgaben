@@ -26,14 +26,17 @@ Gesucht ist eine Reihenfolge der Gäste, die alle Bedingungen erfüllt.
 Die triviale Reihenfolge `ABCDEF` passt also nicht, weil die Gruppe `[ACD]` nicht nebeneinandersitzt. 
 Für eine korrekte Lösung ist es unerheblich, in welcher Reihenfolge die Personen `[ACD]` nebeneinandersitzen.
 Hauptsache, sie sitzen nebeneinander. 
+
 Die Lösung `ACDBEF` erfüllt zwar `[ACD]`, aber `[AE]` ist nicht erfüllt, denn A und E sitzen nicht nebeneinander.
+
 Die Lösung `CDAEBF` erfüllt zwar `[ACD]` (A,C,D sitzen nebeneinander, die Reihenfolge untereinander ist egal) 
 und auch `[AE]`, aber `<BF>` nicht, denn diese dürfen nicht nebeneinandersitzen.
+
 Die Lösung `BCDAEF` erfüllt nun auch `<BF>`, aber leider `<CEF>` nicht. Keiner der Personen in den verbotenen Gruppen
 dürfen neben einer anderen derselben Gruppe sitzen (hier sitzen E und F am Ende des Tisches).
 
-Die Lösung `BEACDF` erfüllt alle Bedingungen und ist korrekt. 
-Die Lösung `FDCAEB` erfüllt ebenfalls alle Bedingungen und ist korrekt. 
+- Die Lösung `BEACDF` erfüllt alle Bedingungen und ist korrekt. 
+- Die Lösung `FDCAEB` erfüllt ebenfalls alle Bedingungen und ist korrekt. 
 
 # Die Aufgabe
 So, nun hast Du verstanden, was sich Don ChaMoin wünscht. Viel Glück. Deine Aufgabe ist folgende Gästeliste:
@@ -42,5 +45,5 @@ So, nun hast Du verstanden, was sich Don ChaMoin wünscht. Viel Glück. Deine Au
     [GBE][LK][FB][MI]
     <KFE><AC><JB><DE><CHIJ><FCK><CD><LC>
 
-Aufgabe 1: Berechne eine erlaubte Sitzordnung
-Aufgabe 2: Wie viele Sitzordnungen existieren, die alle Bedingungen erfüllen?
+- Aufgabe 1: Berechne eine erlaubte Sitzordnung
+- Aufgabe 2: Wie viele Sitzordnungen existieren, die alle Bedingungen erfüllen?
