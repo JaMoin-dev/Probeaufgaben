@@ -1,7 +1,7 @@
 ﻿# Die Story
 Der bekannte Mafiosi Don ChaMoin feiert seinen 70. Geburtstag. Wie sich das gehört, sind alle eingeladen,
 die in der Chicagoer Unterwelt einen Namen haben. Für das Abendessen sollen die Gäste mit Sitzordnung 
-an den Tisch platziert werden. Da Du dich mit Algorithmen auskennst, ist es Deine Aufgabe, die Sitzordnung
+an einer langen Tafel nebeneinander platziert werden. Da Du dich mit Algorithmen auskennst, ist es Deine Aufgabe, die Sitzordnung
 zu erstellen. 
 
 Don ChaMoin schreibt Dir seine Wünsche auf eine Serviette. In die erste Zeile schreibt er 
@@ -37,6 +37,8 @@ dürfen neben einer anderen derselben Gruppe sitzen (hier sitzen E und F am Ende
 
 - Die Lösung `BEACDF` erfüllt alle Bedingungen und ist korrekt. 
 - Die Lösung `FDCAEB` erfüllt ebenfalls alle Bedingungen und ist korrekt. 
+
+Hinweis: Da es eine lange Tafel und kein runder Tisch ist, sitzen bei den Lösungen die Personen B und F nicht nebeneinander!
 
 # Die Aufgabe
 So, nun hast Du verstanden, was sich Don ChaMoin wünscht. Viel Glück. Deine Aufgabe ist folgende Gästeliste:
