@@ -53,6 +53,7 @@ namespace ja.training.csharp._07_Vertragserfuellung
         [InlineData(300, false, true, false, true, 2000, true, false, false, true)]
         [InlineData(290, false, true, true, true, 2000, true, false, false, true)]
         [InlineData(300, false, true, true, true, 2000, true, false, false, false)]
+        [InlineData(290, false, true, true, true, 2010, true, false, false, true)]
         public void Complex_nicht_erfuellt(int mwh, bool wind, bool wasser, bool fisch, bool ohne,
             int mwh2, bool wind2, bool wasser2, bool fisch2, bool ohne2)
         {
