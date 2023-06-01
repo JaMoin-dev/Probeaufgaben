@@ -13,7 +13,7 @@ Ich möchte die Benachrichtigung schliessen können (hab ja jetzt ein Eis) und m
   - Bist Du Desktop-Entwickler*in, sollte es sollte WPF oder ähnliches sein
 - Völlig frei in der Wahl des Designs
 - Temperatur von z.B. https://openweathermap.org/api abrufen, andere APIs sind aber auch erlaubt
-- Es gibt nur ein Eis am Tag, steigt die Temperatur zweimal auf über 30 Grad, gibts nicht noch eins!
+- Es gibt nur ein Eis am Tag, steigt die Temperatur zweimal auf über 30 Grad, gibts nicht noch eins! Auch wenn ich die Page reloade.
 
 - Mach es uns bitte leicht, deinen Code zu reviewn. D.h. wenn irgendwas unübliches notwendig ist, gerne eine Readme dazu schreiben.
 
